@@ -43,25 +43,25 @@ export default function Contact(){
                 <div className="pt-4">
                   <h3 className="text-neon mb-4 font-semibold tracking-wider uppercase text-sm">Connect With Me</h3>
                   <div className="flex flex-wrap gap-4">
-                    <a href="https://tryhackme.com" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-neon transition-colors text-white hover:text-neon group" title="TryHackMe">
+                    <a href="https://tryhackme.com/p/SanketPawar" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-neon transition-colors text-white hover:text-neon group" title="TryHackMe">
                       <SiTryhackme size={22} className="group-hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://hackthebox.com" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-[#9FEF00] transition-colors text-white hover:text-[#9FEF00] group" title="HackTheBox">
+                    <a href="https://profile.hackthebox.com/profile/019d4299-0c04-7212-89e8-b93677176edf" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-[#9FEF00] transition-colors text-white hover:text-[#9FEF00] group" title="HackTheBox">
                       <SiHackthebox size={22} className="group-hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://bugcrowd.com" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-[#F26522] transition-colors text-white hover:text-[#F26522] group" title="Bugcrowd">
+                    <a href="https://bugcrowd.com/h/HelloHackerTeam" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-[#F26522] transition-colors text-white hover:text-[#F26522] group" title="Bugcrowd">
                       <SiBugcrowd size={22} className="group-hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://hackerone.com" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-white transition-colors text-white hover:text-white group" title="HackerOne">
+                    <a href="https://hackerone.com/hellohackerteam" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-white transition-colors text-white hover:text-white group" title="HackerOne">
                       <SiHackerone size={22} className="group-hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://youtube.com" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-[#FF0000] transition-colors text-white hover:text-[#FF0000] group" title="YouTube">
+                    <a href="https://www.youtube.com/@hello-hacker-team" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-[#FF0000] transition-colors text-white hover:text-[#FF0000] group" title="YouTube">
                       <FaYoutube size={22} className="group-hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-[#0077B5] transition-colors text-white hover:text-[#0077B5] group" title="LinkedIn">
+                    <a href="https://linkedin.com/in/sanket87pawar" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-[#0077B5] transition-colors text-white hover:text-[#0077B5] group" title="LinkedIn">
                       <FaLinkedin size={22} className="group-hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://github.com" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-white transition-colors text-white hover:text-white group" title="GitHub">
+                    <a href="https://github.com/HelloHackerTeam" target="_blank" rel="noreferrer" className="glass p-4 rounded-full border border-white/10 hover:border-white transition-colors text-white hover:text-white group" title="GitHub">
                       <FaGithub size={22} className="group-hover:scale-110 transition-transform" />
                     </a>
                   </div>
