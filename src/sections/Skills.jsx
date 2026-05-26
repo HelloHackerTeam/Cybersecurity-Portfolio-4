@@ -145,8 +145,8 @@ export default function Skills(){
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {categories.map(category => (
+                <div key={category.id}>
                 <motion.button
-                  key={category.id}
                   type="button"
                   onClick={() => setActive(category.id)}
                   whileHover={{ y: -3 }}
@@ -167,10 +167,47 @@ export default function Skills(){
                     ))}
                   </div>
                 </motion.button>
+
+                {/* Inline mobile info panel shown directly under the clicked category */}
+                {active === category.id && (
+                  <div className="mt-4 lg:hidden">
+                    <div className="glass p-4 rounded-[24px] border border-white/8 bg-[#060306]/95">
+                      <div className="flex items-center justify-between gap-4">
+                        <div>
+                          <h4 className="text-xl font-semibold text-white">{category.label}</h4>
+                          <p className="mt-1 text-sm text-gray-300">Detailed tools, glowing skill chips, and real command prompts that show your advanced mastery.</p>
+                        </div>
+                        <div className="rounded-2xl border border-red-500/20 bg-red-500/10 px-3 py-1 text-xs uppercase tracking-[0.3em] text-red-300">Active</div>
+                      </div>
+
+                      <div className="mt-4 space-y-3">
+                        {category.skills.map((skill, index) => (
+                          <div key={skill.name} className="space-y-1">
+                            <div className="flex items-center justify-between text-sm text-gray-300">
+                              <span>{skill.name}</span>
+                              <span>{skill.level}%</span>
+                            </div>
+                            <div className="h-2 rounded-full bg-white/10 overflow-hidden">
+                              <div className="h-full rounded-full bg-gradient-to-r from-red-500 via-fuchsia-500 to-red-300" style={{width: `${skill.level}%`}} />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                        {category.skills.map(skill => (
+                          <span key={skill.name} className="glass rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-gray-200 bg-white/5 border border-white/10">{skill.name}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+                </div>
               ))}
             </div>
 
-            <div className="glass p-6 rounded-[32px] border border-white/10 shadow-neon bg-[#060306]/90 relative z-10 min-h-[420px] sm:min-h-[360px]">
+            {/* Desktop/right-side info panel (hidden on small screens) */}
+            <div className="glass p-6 rounded-[32px] border border-white/10 shadow-neon bg-[#060306]/90 relative z-10 hidden lg:block min-h-[360px]">
               <AnimatePresence mode="wait">
                 {categories.filter(category => category.id === active).map(category => (
                   <motion.div key={category.id} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.25 }}>
@@ -199,11 +236,11 @@ export default function Skills(){
 
                       <div className="rounded-[28px] border border-red-500/20 bg-[#0d0408]/90 p-5 text-sm text-gray-200">
                         <div className="flex items-center justify-between text-xs uppercase tracking-[0.35em] text-red-300 mb-3">terminal</div>
-                        <div className="font-mono text-[0.95rem] leading-6 text-gray-100">{category.terminal}</div>
+                        <div className="font-mono text-[0.95rem] leading-6 text-gray-100">{categories.find(c=>c.id===active)?.terminal}</div>
                       </div>
 
                       <div className="grid gap-2 sm:grid-cols-2">
-                        {category.skills.map(skill => (
+                        {categories.find(c=>c.id===active)?.skills.map(skill => (
                           <span key={skill.name} className="glass rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-gray-200 bg-white/5 border border-white/10 shadow-[0_0_20px_rgba(255,0,56,0.12)]">{skill.name}</span>
                         ))}
                       </div>
