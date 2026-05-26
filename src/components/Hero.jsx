@@ -66,20 +66,22 @@ export default function Hero(){
             <div className="relative w-full max-w-[640px] flex items-center justify-center">
               {/* subtle blurred backdrop + particles */}
               <div className="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none">
-                <div className="w-[520px] h-[520px] rounded-full bg-gradient-to-r from-cyan-900/10 via-fuchsia-900/6 to-red-900/6 opacity-25 blur-[16px]" />
+                <div className="w-[320px] h-[320px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-r from-cyan-900/10 via-fuchsia-900/6 to-red-900/6 opacity-25 blur-[16px]" />
                 <div className="absolute inset-0 pointer-events-none">
-                  <span className="absolute left-12 top-10 w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-70 animate-pulse" />
-                  <span className="absolute right-16 top-24 w-1.5 h-1.5 bg-red-400 rounded-full opacity-60 animate-pulse" />
-                  <span className="absolute left-28 bottom-20 w-1.5 h-1.5 bg-cyan-300 rounded-full opacity-50 animate-pulse" />
+                  <span className="absolute left-10 top-8 w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-70 animate-pulse" />
+                  <span className="absolute right-12 top-20 w-1.5 h-1.5 bg-red-400 rounded-full opacity-60 animate-pulse" />
+                  <span className="absolute left-20 bottom-16 w-1.5 h-1.5 bg-cyan-300 rounded-full opacity-50 animate-pulse" />
                 </div>
               </div>
 
               {/* floating modules around and enlarged clean profile image */}
               <div className="relative w-full flex items-center justify-center">
-                <FloatingModules />
+                <div className="hidden md:block">
+                  <FloatingModules />
+                </div>
                 <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.35 }} className="relative z-10 flex items-center justify-center">
                   <div className="rounded-full p-1 bg-black/80 shadow-lg">
-                    <div className="bg-[#05060a] rounded-full w-[420px] h-[420px] overflow-hidden border border-black/30">
+                    <div className="bg-[#05060a] rounded-full w-full max-w-[420px] aspect-square overflow-hidden border border-black/30">
                       <img src={ownerImage} alt="Sanket Gopal Pawar" className="h-full w-full object-cover" />
                     </div>
                   </div>

@@ -17,10 +17,10 @@ const modules = [
 
 export default function FloatingModules(){
   const count = modules.length
-  const radius = 360 // px distance from center — keep modules clear of profile (420px)
+  const radius = 260 // px distance from center — keep modules clear of profile on larger displays
 
   return (
-    <div className="pointer-events-none">
+    <div className="pointer-events-none hidden md:block">
       {modules.map((mod, i) => {
         const Icon = mod.icon
         const angle = (i / count) * Math.PI * 2 - Math.PI / 2
