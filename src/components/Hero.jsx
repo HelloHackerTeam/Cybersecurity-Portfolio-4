@@ -37,7 +37,7 @@ export default function Hero(){
   }
 
   return (
-    <section id="top" className="relative overflow-hidden min-h-screen">
+    <section id="top" className="relative overflow-hidden min-h-screen pt-20 sm:pt-24">
       <MatrixBackground />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,245,255,0.16),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(127,90,240,0.12),_transparent_18%)] pointer-events-none" />
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 flex min-h-screen flex-col justify-center">

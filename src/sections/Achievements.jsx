@@ -40,7 +40,7 @@ export default function Achievements(){
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="text-2xl font-semibold text-white pr-8">{achievements.find(item=>item.id===active).title}</div>
-                <button onClick={()=> setActive(null)} className="absolute top-8 right-8 text-white/50 hover:text-neon text-2xl transition-colors">&times;</button>
+                <button onClick={()=> setActive(null)} className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white/50 hover:text-neon text-2xl transition-colors">&times;</button>
               </div>
               <div className="mt-6 text-gray-300 text-lg">
                 <p className="mb-6">{achievements.find(item=>item.id===active).summary}</p>

@@ -56,7 +56,7 @@ export default function Gallery(){
                 onClick={() => setSelectedImage(img)}
                 className="glass overflow-hidden rounded-[28px] border border-white/10 shadow-neon flex flex-col cursor-pointer hover:border-[#4DA6FF]/50 transition-colors duration-300"
               >
-                <img src={img.src} alt={img.title} className="h-64 w-full object-cover" />
+                <img src={img.src} alt={img.title} className="h-60 sm:h-72 w-full object-cover" />
                 <div className="px-5 py-4 text-sm font-mono tracking-wide text-[#E8E8E8] bg-black/60 border-t border-white/5">
                   &gt; {img.title}
                 </div>
@@ -87,7 +87,7 @@ export default function Gallery(){
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              className="absolute bottom-10 left-0 right-0 text-center text-[#E8E8E8] font-mono tracking-widest text-lg drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]"
+              className="absolute bottom-6 left-0 right-0 text-center text-[#E8E8E8] font-mono tracking-widest text-base sm:text-lg drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]"
             >
                &gt; {selectedImage.title}
             </motion.div>

@@ -41,7 +41,7 @@ export default function App(){
   }, [])
 
   return (
-    <div className="min-h-screen font-space bg-bg text-white transition-colors duration-500 overflow-hidden">
+    <div className="min-h-screen font-space bg-bg text-white transition-colors duration-500 overflow-x-hidden">
       <AnimatePresence>
         {loading && <LoadingScreen show={loading} onComplete={() => setLoading(false)} />}
       </AnimatePresence>
