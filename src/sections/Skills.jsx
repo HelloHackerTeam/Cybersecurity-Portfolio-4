@@ -142,35 +142,35 @@ export default function Skills(){
             </div>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="grid gap-4 sm:grid-cols-2">
+          <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {categories.map(category => (
                 <motion.button
                   key={category.id}
                   type="button"
                   onClick={() => setActive(category.id)}
                   whileHover={{ y: -3 }}
-                  className={`group relative text-left overflow-hidden rounded-[32px] border p-6 transition ${active === category.id ? 'border-red-500 bg-[#120105]/80 shadow-[0_0_30px_rgba(255,0,56,0.22)]' : 'border-white/10 bg-white/5 hover:bg-white/10'}`}>
+                  className={`group relative text-left overflow-hidden rounded-[32px] border p-5 transition w-full ${active === category.id ? 'border-red-500 bg-[#120105]/80 shadow-[0_0_30px_rgba(255,0,56,0.22)]' : 'border-white/10 bg-white/5 hover:bg-white/10'}`}>
                   <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition" />
                   <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500/15 text-red-300">
+                    <div className="flex h-12 w-12 min-w-[3rem] items-center justify-center rounded-2xl bg-red-500/15 text-red-300">
                       <category.icon className="text-xl" />
                     </div>
                     <div>
-                      <div className="text-lg font-semibold text-white">{category.label}</div>
-                      <div className="text-sm text-gray-400 mt-1">{category.skills.length} subskills</div>
+                      <div className="text-base sm:text-lg font-semibold text-white">{category.label}</div>
+                      <div className="text-xs sm:text-sm text-gray-400 mt-1">{category.skills.length} subskills</div>
                     </div>
                   </div>
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  <div className="mt-4 flex flex-wrap gap-2">
                     {category.skills.slice(0, 4).map(skill => (
-                      <span key={skill.name} className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.25em] text-gray-300">{skill.name}</span>
+                      <span key={skill.name} className="rounded-full bg-white/10 px-3 py-1 text-[0.65rem] sm:text-xs uppercase tracking-[0.22em] text-gray-300">{skill.name}</span>
                     ))}
                   </div>
                 </motion.button>
               ))}
             </div>
 
-            <div className="glass p-6 rounded-[32px] border border-white/10 shadow-neon bg-[#060306]/90">
+            <div className="glass p-6 rounded-[32px] border border-white/10 shadow-neon bg-[#060306]/90 relative z-10">
               <AnimatePresence mode="wait">
                 {categories.filter(category => category.id === active).map(category => (
                   <motion.div key={category.id} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.25 }}>
