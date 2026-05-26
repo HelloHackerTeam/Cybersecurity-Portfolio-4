@@ -142,7 +142,7 @@ export default function Skills(){
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="mt-10 grid gap-8 lg:grid-cols-2">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {categories.map(category => (
                 <motion.button
@@ -170,7 +170,7 @@ export default function Skills(){
               ))}
             </div>
 
-            <div className="glass p-6 rounded-[32px] border border-white/10 shadow-neon bg-[#060306]/90 relative z-10">
+            <div className="glass p-6 rounded-[32px] border border-white/10 shadow-neon bg-[#060306]/90 relative z-10 min-h-[420px] sm:min-h-[360px]">
               <AnimatePresence mode="wait">
                 {categories.filter(category => category.id === active).map(category => (
                   <motion.div key={category.id} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.25 }}>
